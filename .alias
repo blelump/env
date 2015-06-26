@@ -1,0 +1,4 @@
+alias ls='ls --color=auto'
+alias gh='git diff HEAD $1'
+alias gss='git status'
+
