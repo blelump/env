@@ -1,4 +1,6 @@
 alias ls='ls --color=auto'
 alias gh='git diff HEAD $1'
 alias gss='git status'
-
+alias ga='git add'
+alias gch='git checkout $1'
+alias gl='git log --oneline -10'
