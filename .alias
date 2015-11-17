@@ -1,6 +1,12 @@
+# Git
 alias ls='ls --color=auto'
 alias gh='git diff HEAD $1'
 alias gss='git status'
 alias ga='git add'
 alias gch='git checkout $1'
 alias gl='git log --oneline -10'
+# Docker
+alias dl='docker logs -f --tail=200 $1'
+alias de='docker exec -it "$1" bash'
+alias dr='docker run -it --rm "$1" bash'
+alias dp='docker ps'
