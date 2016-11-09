@@ -2,5 +2,6 @@
 
 eval $(ssh-agent)
 
+export TERM=xterm-256color-italic
 export GIT_EDITOR=vim
 export PS1="\u@\h: \[$(tput sgr0)\]\[\033[38;5;202m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"
