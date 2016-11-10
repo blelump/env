@@ -13,4 +13,11 @@ set termguicolors
 set background=dark
 
 syntax on
+set encoding=utf-8
 colorscheme gruvbox
+
+set list
+set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set showbreak=↪
+
+noremap <F12> :set list!<CR>
