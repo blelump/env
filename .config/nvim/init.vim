@@ -19,5 +19,6 @@ colorscheme gruvbox
 set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
+set colorcolumn=80
 
 noremap <F12> :set list!<CR>
