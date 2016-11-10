@@ -1,12 +1,10 @@
 # Git
-alias ls='ls --color=auto'
 alias gh='git diff HEAD $1'
 alias gss='git status'
 alias ga='git add'
 alias gch='git checkout $1'
 alias gl='git log --oneline -10'
 alias gc='git commit'
-alias gp='git push'
 
 # Docker
 alias dl='docker logs -f --tail=200 $1'
@@ -18,3 +16,6 @@ alias dp='docker ps'
 alias tm='tmux'
 alias tma='tmux a'
 alias tmr='tmux source-file ~/.tmux.conf'
+
+alias vim='nvim'
+alias ls='ls --color=auto'
