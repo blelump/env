@@ -119,7 +119,7 @@ nmap <leader>. <c-^>
 
 " Windows
 " go to next window
-map <leader>n <C-w>W
+map <leader>m <C-w>W
 
 " Move the whole line above/below
 map  <A-,> :m -2<cr>
@@ -156,3 +156,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" CtrlSF conf
+nmap <C-F>f <Plug>CtrlSFPrompt

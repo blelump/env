@@ -11,6 +11,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
-"Plug 'bling/vim-bufferline'
+Plug 'dyng/ctrlsf.vim'
 
 call plug#end()
