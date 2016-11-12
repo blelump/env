@@ -1,0 +1,25 @@
+# General ack Settings
+##########################################################
+
+--ignore-case
+
+--sort-files
+--follow
+--color
+--group
+
+# ignore directories
+--ignore-file=ext:log
+--ignore-file=ext:orig
+--ignore-dir=tmp
+--ignore-dir=public
+
+# added file types
+--type-set=css=.css,.less,.scss
+--type-set=less=.less
+--type-set=html=.html,.mustache,.handlebars,.tmpl
+--type-set=json=.json
+--type-set=slim=.slim
+--type-set=md=.markdown,.md
+--type-set=style=.scss,.sass,.less,.css
+--type-set=ruby=.rb
