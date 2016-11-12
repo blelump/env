@@ -7,6 +7,8 @@ if (empty($TMUX) && has("termguicolors"))
     set termguicolors
 endif
 
+let mapleader = ','
+
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:gruvbox_italic=1
 set termguicolors
@@ -81,7 +83,6 @@ nmap <silent> <leader>k :NERDTreeToggle<cr>
 " expand to the path of the file in the current buffer
 nmap <silent> <leader>y :NERDTreeFind<cr>
 
-let mapleader = ','
 let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '▷'
 let NERDTreeDirArrowCollapsible = '▼'
@@ -108,13 +109,28 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 \ })<CR>
 
 
-nmap <silent> <leader>r :Buffers<cr>
 nmap <silent> <leader>p :FZF<cr>
 nmap <leader>f :Ack ""<Left>
 
+" Buffers
+nmap <silent> <leader>r :Buffers<cr>
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+nmap <leader>. <c-^>
+
+" Windows
+" go to next window
+map <leader>n <C-w>W
+
+" Move the whole line above/below
+map  <A-,> :m -2<cr>
+map  <A-.> :m +1<cr>
 
 " remap esc
 inoremap jk <esc>
+
+" scroll the viewport faster
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 
 " shortcut to save
 nmap <leader>, :w<cr>
@@ -128,4 +144,15 @@ vmap <leader>[ <gv
 vmap <leader>] >gv
 nmap <leader>[ <<
 nmap <leader>] >>
-nmap <leader>. <c-^>
+
+" Airline conf
+let g:airline#extensions#tabline#enabled = 1 " enable airline tabline
+let g:airline#extensions#tabline#tab_min_count = 2 " only show tabline if tabs are being used (more than 1 tab open)
+"let g:airline#extensions#tabline#show_buffers = 0 " do not show open buffers in tabline
+let g:airline#extensions#tabline#show_splits = 0
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
