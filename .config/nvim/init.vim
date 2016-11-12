@@ -58,6 +58,15 @@ set mat=2                   " how many tenths of a second to blink
 set splitbelow
 set splitright
 
+" enable . command in visual mode
+vnoremap . :normal .<cr>
+
+" Easier buffers navigation
+map <silent> <C-h> :call functions#WinMove('h')<cr>
+map <silent> <C-j> :call functions#WinMove('j')<cr>
+map <silent> <C-k> :call functions#WinMove('k')<cr>
+map <silent> <C-l> :call functions#WinMove('l')<cr>
+
 " Deal with trailing whitespaces
 function! TrimWhiteSpace()
     %s/\s\+$//e
