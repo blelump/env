@@ -158,4 +158,4 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " CtrlSF conf
-nmap <C-F>f <Plug>CtrlSFPrompt
+nmap <C-F>r <Plug>CtrlSFPrompt -filetype rb <space>
