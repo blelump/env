@@ -9,6 +9,9 @@ endif
 
 let mapleader = ','
 
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:gruvbox_italic=1
 set termguicolors
@@ -187,3 +190,6 @@ omap <silent> ib <Plug>CamelCaseMotion_ib
 xmap <silent> ib <Plug>CamelCaseMotion_ib
 omap <silent> ie <Plug>CamelCaseMotion_ie
 xmap <silent> ie <Plug>CamelCaseMotion_ie
+
+" Clever XML tags autocomplete
+inoremap ><Tab> ><Esc>F<lyt>o</<C-r>"><Esc>O<Space>
