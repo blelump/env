@@ -12,5 +12,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
+Plug 'bkad/CamelCaseMotion'
 
 call plug#end()
