@@ -1,6 +1,7 @@
 # Git
 alias gh='git diff HEAD $1'
 alias gss='git status'
+alias gs='git status'
 alias ga='git add'
 alias gch='git checkout $1'
 alias gl='git log --oneline -10'
@@ -15,6 +16,8 @@ alias dp='docker ps'
 # Tmux
 alias tm='tmux'
 alias tma='tmux a'
+alias tat='tmux attach -t'
+alias tls='tmux ls'
 alias tmr='tmux source-file ~/.tmux.conf'
 
 alias vim='nvim'
