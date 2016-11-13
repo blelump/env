@@ -123,6 +123,9 @@ endif
 nmap <silent> <leader>r :Buffers<cr>
 map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 nmap <leader>. <c-^>
+:nnoremap <C-n> :bnext<CR>
+:nnoremap <C-p> :bprevious<CR>
+
 
 " Windows
 " go to next window
