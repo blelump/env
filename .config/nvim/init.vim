@@ -60,6 +60,9 @@ set mat=2                   " how many tenths of a second to blink
 set splitbelow
 set splitright
 
+" edit ~/.config/nvim/init.vim
+map <leader>ev :e! ~/.config/nvim/init.vim<cr>
+
 " enable . command in visual mode
 vnoremap . :normal .<cr>
 
@@ -112,6 +115,10 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 nmap <silent> <leader>p :FZF<cr>
 nmap <leader>f :Ack ""<Left>
 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " Buffers
 nmap <silent> <leader>r :Buffers<cr>
 map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
@@ -158,4 +165,5 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " CtrlSF conf
-nmap <C-F>r <Plug>CtrlSFPrompt -filetype rb <space>
+let g:ctrlsf_ackprg = 'ag'
+nmap <C-F>r <Plug>CtrlSFPrompt -G .rb <space>
