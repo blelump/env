@@ -193,3 +193,7 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 
 " Clever XML tags autocomplete
 inoremap ><Tab> ><Esc>F<lyt>o</<C-r>"><Esc>O<Space>
+
+" SplitjoinJoin conf
+nmap <Leader>j :SplitjoinJoin<cr>
+nmap <Leader>s :SplitjoinSplit<cr>

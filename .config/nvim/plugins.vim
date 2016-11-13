@@ -16,5 +16,6 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'AndrewRadev/splitjoin.vim'
 
 call plug#end()
