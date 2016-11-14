@@ -198,9 +198,14 @@ inoremap ><Tab> ><Esc>F<lyt>o</<C-r>"><Esc>O<Space>
 nmap <Leader>j :SplitjoinJoin<cr>
 nmap <Leader>s :SplitjoinSplit<cr>
 
-
+" Deoplete conf
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_camel_case = 1
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" vim-commentary conf
+xmap <C-_> <Plug>Commentary
+nmap <C-_> <Plug>Commentary
+omap <C-_> <Plug>Commentary
