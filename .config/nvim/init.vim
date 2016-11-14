@@ -26,7 +26,7 @@ set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 set colorcolumn=80
-
+set hidden
 
 set clipboard+=unnamedplus
 set autoindent              " automatically set indent of new line
@@ -197,3 +197,10 @@ inoremap ><Tab> ><Esc>F<lyt>o</<C-r>"><Esc>O<Space>
 " SplitjoinJoin conf
 nmap <Leader>j :SplitjoinJoin<cr>
 nmap <Leader>s :SplitjoinSplit<cr>
+
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_ignore_case = 1
+let g:deoplete#enable_camel_case = 1
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
