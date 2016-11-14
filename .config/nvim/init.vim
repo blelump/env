@@ -209,3 +209,23 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 xmap <C-_> <Plug>Commentary
 nmap <C-_> <Plug>Commentary
 omap <C-_> <Plug>Commentary
+
+" vim-test conf
+let test#strategy = {
+  \ 'nearest': 'vtr',
+  \ 'file':    'vtr',
+  \ 'suite':   'basic',
+\}
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
+" vim-tmux-navigator conf
+let g:tmux_navigator_no_mappings = 1
+" nmap <silent> <c-h> :TmuxNavigateLeft<cr>
+" nmap <silent> <c-l> :TmuxNavigateRight<cr>
+nmap <silent> <c-j> :TmuxNavigateDown<cr>
+nmap <silent> <c-k> :TmuxNavigateUp<cr>
+nmap <silent> <c-\> :TmuxNavigatePrevious<cr>

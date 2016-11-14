@@ -20,5 +20,8 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'fishbullet/deoplete-ruby'
 Plug 'tpope/vim-commentary'
+Plug 'janko-m/vim-test'
+Plug 'christoomey/vim-tmux-runner'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
