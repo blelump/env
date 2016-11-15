@@ -249,3 +249,22 @@ let g:tmux_navigator_no_mappings = 1
 nmap <silent> <c-j> :TmuxNavigateDown<cr>
 nmap <silent> <c-k> :TmuxNavigateUp<cr>
 nmap <silent> <c-\> :TmuxNavigatePrevious<cr>
+
+" Autoclose and deletion of brackets
+set matchpairs=(:),[:],{:},<:>
+function! InEmptyPair()
+  let cur = strpart(getline('.'),getpos('.')[2]-2,2)
+  for pair in (split(&matchpairs,',') + ['":"',"':'"])
+    if cur == join(split(pair,':'),'')
+      return 1
+    endif
+  endfor
+  return 0
+endfunc
+inoremap <expr> <BS> InEmptyPair() ? "\<Right>\<BS>\<BS>" : "\<BS>"
+ino " ""<left>
+ino ' ''<left>
+ino ( ()<left>
+ino [ []<left><space><left>
+ino { {}<left><space><left>
+ino {<CR> {<CR>}<ESC>O
