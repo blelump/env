@@ -117,6 +117,7 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 
 nmap <silent> <leader>p :FZF<cr>
 nmap <leader>f :Ack ""<Left>
+map <F12> :call fzf#vim#tags(expand('<cword>'))<cr>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -150,7 +151,7 @@ nmap <leader>, :w<cr>
 
 nmap <Leader>s :%s//g<Left><Left>
 nmap <Leader><space> gg=G''
-noremap <F12> :set list!<CR>
+noremap <F10> :set list!<CR>
 
 " Textmate style indentation
 vmap <leader>[ <gv
