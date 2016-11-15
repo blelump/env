@@ -23,5 +23,6 @@ Plug 'tpope/vim-commentary'
 Plug 'janko-m/vim-test'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-obsession'
 
 call plug#end()
