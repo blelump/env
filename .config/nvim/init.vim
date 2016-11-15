@@ -217,12 +217,30 @@ let test#strategy = {
   \ 'nearest': 'vtr',
   \ 'file':    'vtr',
   \ 'suite':   'basic',
+  \ 'last':    'vtr',
 \}
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
+
+function! s:ResizePane()
+  call system("tmux list-panes -F '#F' | grep -q Z")
+  if !(v:shell_error)
+    call system('tmux resize-pane -Z')
+  endif
+endfunction
+function! s:AttachToExistingPane()
+  if str2nr(system("tmux display-message -p '#{window_panes}'")) > 1
+    VtrAttachToPane
+  endif
+endfunction
+
+command! ResizeAndAttach call s:ResizePane() | call s:AttachToExistingPane()
+
+nmap <silent> <leader>t :ResizeAndAttach<CR> :TestNearest<CR>
+nmap <silent> <leader>T :ResizeAndAttach<CR> :TestFile<CR>
+nmap <silent> <leader>a :ResizeAndAttach<CR> :TestSuite<CR>
+nmap <silent> <leader>l :ResizeAndAttach<CR> :TestLast -strategy=vtr<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+
+nnoremap <leader>x :VtrFocusRunner<cr>
 
 " vim-tmux-navigator conf
 let g:tmux_navigator_no_mappings = 1
