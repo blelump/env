@@ -116,7 +116,7 @@ nnoremap <silent> <Leader><Enter> :call fzf#run({
 
 
 nmap <silent> <leader>p :FZF<cr>
-nmap <leader>f :Ack ""<Left>
+nmap <leader>f :Ack! ""<Left>
 map <F12> :call fzf#vim#tags(expand('<cword>'))<cr>
 
 if executable('ag')
