@@ -284,3 +284,7 @@ ino ( ()<left>
 ino [ []<left><space><left>
 ino { {}<left><space><left>
 ino {<CR> {<CR>}<ESC>O
+
+" vim-indent-guides conf
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1

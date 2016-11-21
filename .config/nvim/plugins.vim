@@ -24,5 +24,6 @@ Plug 'janko-m/vim-test'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-obsession'
+Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
