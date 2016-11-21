@@ -220,6 +220,7 @@ nmap <Leader>S :SplitjoinSplit<cr>
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_camel_case = 1
+call deoplete#custom#set('buffer', 'rank', 9999)
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
