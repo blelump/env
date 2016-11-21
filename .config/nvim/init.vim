@@ -213,8 +213,8 @@ xmap <silent> ie <Plug>CamelCaseMotion_ie
 inoremap ><Tab> ><Esc>F<lyt>o</<C-r>"><Esc>O<Space>
 
 " SplitjoinJoin conf
-nmap <Leader>j :SplitjoinJoin<cr>
-nmap <Leader>s :SplitjoinSplit<cr>
+nmap <Leader>J :SplitjoinJoin<cr>
+nmap <Leader>S :SplitjoinSplit<cr>
 
 " Deoplete conf
 let g:deoplete#enable_at_startup = 1
