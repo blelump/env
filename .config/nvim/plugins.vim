@@ -26,5 +26,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-obsession'
 Plug 'slim-template/vim-slim'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()

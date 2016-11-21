@@ -223,7 +223,12 @@ let g:deoplete#enable_camel_case = 1
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-" vim-commentary conf
+
+let g:UltiSnipsExpandTrigger="<S-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" vim-commentary conf (ctrl+/)
 xmap <C-_> <Plug>Commentary
 nmap <C-_> <Plug>Commentary
 omap <C-_> <Plug>Commentary
