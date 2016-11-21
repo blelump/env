@@ -223,6 +223,7 @@ let g:deoplete#enable_camel_case = 1
 call deoplete#custom#set('buffer', 'rank', 9999)
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent><expr><S-tab> pumvisible() ? "\<c-p>" : "\<S-tab>"
 
 
 let g:UltiSnipsExpandTrigger="<S-tab>"
