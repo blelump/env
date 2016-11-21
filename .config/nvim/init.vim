@@ -226,7 +226,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <silent><expr><S-tab> pumvisible() ? "\<c-p>" : "\<S-tab>"
 
 
-let g:UltiSnipsExpandTrigger="<S-tab>"
+let g:UltiSnipsExpandTrigger="<NUL>" " Map to ctrl + space
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
