@@ -288,7 +288,7 @@ inoremap <expr> <BS> InEmptyPair() ? "\<Right>\<BS>\<BS>" : "\<BS>"
 ino " ""<left>
 ino ' ''<left>
 ino ( ()<left>
-ino [ []<left><space><left>
+ino [ []<left>
 ino { {}<left><space><left>
 ino {<CR> {<CR>}<ESC>O
 
