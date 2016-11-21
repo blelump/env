@@ -147,6 +147,18 @@ inoremap jk <esc>
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
+" split line under cursor
+:nnoremap K i<CR><Esc>
+
+" Find next ) char and add ', ' -- useful while args editing
+function NextChar()
+  execute "normal! \<esc>:call search('\''\\|\"\\|]\\|\)\\|\_$')\<cr>"
+endfunction
+nnoremap  qe :call NextChar()<cr>
+nnoremap  qw :call NextChar()<cr>a
+inoremap  qw :call NextChar()<cr>a
+
+
 " shortcut to save
 nmap <leader>, :w<cr>
 
