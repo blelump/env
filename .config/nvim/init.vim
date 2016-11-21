@@ -172,6 +172,8 @@ vmap <leader>] >gv
 nmap <leader>[ <<
 nmap <leader>] >>
 
+map <leader>]] ]m
+map <leader>[[ [m
 " Airline conf
 let g:airline#extensions#tabline#enabled = 1 " enable airline tabline
 let g:airline#extensions#tabline#tab_min_count = 2 " only show tabline if tabs are being used (more than 1 tab open)
