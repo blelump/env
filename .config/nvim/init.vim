@@ -152,11 +152,12 @@ nnoremap <C-y> 3<C-y>
 
 " Find next ) char and add ', ' -- useful while args editing
 function NextChar()
-  execute "normal! \<esc>:call search('\''\\|\"\\|]\\|\)\\|\_$')\<cr>"
+  execute "normal! \<esc>:call search('\v\''\\|\"\\|]\\|\)\\|$')\<cr>"
 endfunction
-nnoremap  qe :call NextChar()<cr>
-nnoremap  qw :call NextChar()<cr>a
-inoremap  qw :call NextChar()<cr>a
+command! GoToNextChar call NextChar()
+nnoremap  qe :GoToNextChar<cr>
+nnoremap  qw :GoToNextChar<cr>a
+inoremap <silent>  qw <ESC>:GoToNextChar<cr>a
 
 
 " shortcut to save
