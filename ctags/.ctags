@@ -1,3 +1,4 @@
+--exclude=*.yml
 --exclude=.git
 --exclude=log
 --exclude=target
