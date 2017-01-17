@@ -220,18 +220,14 @@ nmap <Leader>S :SplitjoinSplit<cr>
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_camel_case = 1
-let deoplete#tag#cache_limit_size = 10000000
-let g:deoplete#sources = {}
-let g:deoplete#sources._ = ['buffer', 'tag']
 call deoplete#custom#set('buffer', 'rank', 9999)
-call deoplete#custom#set('tag', 'rank', 8888)
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <silent><expr><S-tab> pumvisible() ? "\<c-p>" : "\<S-tab>"
 nnoremap <F12> :exec("tjump ".expand("<cword>"))<CR>
 
 
-let g:UltiSnipsExpandTrigger="<NUL>" " Map to ctrl + space
+let g:UltiSnipsExpandTrigger="<c-space>" " Map to ctrl + space
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
