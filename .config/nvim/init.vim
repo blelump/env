@@ -162,8 +162,8 @@ inoremap <silent>  qw <ESC>:GoToNextChar<cr>a
 " shortcut to save
 nmap <leader>, :w<cr>
 
-nmap <Leader>s :%s//g<Left><Left>
-nmap <Leader><space> gg=G''
+nmap <Leader>s :%s///gc<Left><Left><Left><Left>
+nmap <Leader><space> mqgg=G'qzz
 noremap <F10> :set list!<CR>
 
 " Textmate style indentation
