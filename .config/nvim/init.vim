@@ -165,6 +165,9 @@ nmap <leader>, :w<cr>
 " run rubocop COPS manually
 nmap <leader>b :SyntasticCheck rubocop<cr>
 
+" open git status in new window
+nmap gc :tabedit \%\|Gstatus<cr>
+
 nmap <Leader>s :%s///gc<Left><Left><Left><Left>
 nmap <Leader><space> mqgg=G'qzz
 noremap <F10> :set list!<CR>
