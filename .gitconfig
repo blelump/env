@@ -1,0 +1,23 @@
+[user]
+  name = blelump
+  email = blelump@martex.nom.pl
+[mergetool]
+  path = nvim
+[merge]
+  tool = vimdiff
+[diff]
+  tool = nvim
+[alias]
+  unpushed = log --branches --not --remotes --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  ca = commit -a
+  ci = commit
+  st = status
+  co = checkout
+  cob = checkout -b
+  br = branch
+  brl = branch -l
+  au = add -u
+  unstage = reset HEAD
+  undo-last-commit = reset --soft HEAD^
+  redo-last-commit = commit -c ORIG_HEAD
