@@ -4,7 +4,7 @@ alias gss='git status'
 alias gs='git status'
 alias ga='git add'
 alias gch='git checkout $1'
-alias gl='git log --oneline -10'
+alias gl='git lg --oneline -10'
 alias gc='git commit'
 
 # Docker
