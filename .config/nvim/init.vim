@@ -15,6 +15,7 @@ set omnifunc=syntaxcomplete#Complete
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:gruvbox_italic=1
 set termguicolors
+set mouse=a
 set background=dark
 
 syntax on
