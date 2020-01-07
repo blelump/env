@@ -1,0 +1,45 @@
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
+ 
+bind r source ~/.screenrc
+ 
+bind C screen
+ 
+# create new layout with a shell prompt
+bind c eval 'layout new' screen
+ 
+bind "!" layout select 0
+bind "@" layout select 1
+bind "#" layout select 2
+bindkey "^[3" layout select 3
+bindkey "^[4" layout select 4
+bindkey "^[5" layout select 5
+bindkey "^[6" layout select 6
+bindkey "^[7" layout select 7
+bindkey "^[8" layout select 8
+bindkey "^[9" layout select 9
+ 
+# switch to next layout
+bind n layout next
+ 
+# switch to previous layout
+bind p layout prev
+ 
+# create new empty layout 
+bind N layout new
+ 
+# remove current layout
+bind q layout remove
+ 
+layout new 'horizontal'
+split
+layout new 'vertical'
+split -v
+layout new  'main'
+ 
+# bind control sequences for new layouts
+bind V layout select 'vertical'
+bind H layout select 'horizontal'
+bind ' ' layout next # <- actually means Ctrl-a + Space
