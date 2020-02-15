@@ -1,3 +1,5 @@
+escape ^Ww
+
 bind h focus left
 bind j focus down
 bind k focus up
@@ -31,7 +33,7 @@ bind p layout prev
 bind N layout new
  
 # remove current layout
-bind q layout remove
+bind D layout remove
  
 layout new 'horizontal'
 split
